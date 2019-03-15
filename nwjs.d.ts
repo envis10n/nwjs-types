@@ -1,8 +1,6 @@
-import { EventEmitter } from "events";
-
-declare module nw {
+declare namespace nw {
     const App: NWApp;
-    class NWApp extends EventEmitter {
+    class NWApp {
         public readonly argv: string[];
         public readonly fullArgv: string[];
         public readonly filteredArgv: string[];
@@ -31,7 +29,7 @@ declare module nw {
             failed?: Function;
         }
     }
-    class Shortcut extends EventEmitter {
+    class Shortcut {
         public active?: Function;
         public failed?: Function;
         public key: string;
@@ -61,7 +59,7 @@ declare module nw {
         readAvailableTypes(): "text" | "png" | "jpeg" | "html" | "rtf"[];
         clear(): this;
     }
-    class MenuItem extends EventEmitter {
+    class MenuItem {
         public readonly type: "normal" | "checkbox" | "separator";
         public label: string;
         public icon: string;
@@ -121,7 +119,7 @@ declare module nw {
         rotation: number;
         touchSupport: number;
     }
-    class NWDesktopCaptureMonitor extends EventEmitter {
+    class NWDesktopCaptureMonitor {
         public started: boolean;
         constructor();
         start(should_include_screens: boolean, should_include_windows: boolean): this;
@@ -134,7 +132,7 @@ declare module nw {
         on(event: "thumbnailchanged", listener: (id: string, thumbnail: string) => void): this;
     }
     const Screen: NWScreen;
-    class NWScreen extends EventEmitter {
+    class NWScreen {
         public readonly screens: IScreenData[];
         public readonly DesktopCaptureMonitor: NWDesktopCaptureMonitor;
         constructor();
@@ -171,7 +169,7 @@ declare module nw {
         inject_js_start?: string;
         inject_js_end?: string;
     }
-    class Window extends EventEmitter {
+    class Window {
         public readonly window: any;
         public x: number;
         public y: number;
@@ -278,5 +276,3 @@ declare module nw {
         }) => void): this;
     }
 }
-
-export = nw;

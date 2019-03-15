@@ -275,4 +275,26 @@ declare namespace nw {
             ignore(): void;
         }) => void): this;
     }
+    namespace Shell {
+        function openExternal(uri: string): void;
+        function openItem(file_path: string): void;
+        function showItemInFolder(file_path: string): void;
+    }
+    class Tray {
+        public title: string;
+        public tooltip: string;
+        public icon: string;
+        public alticon: string;
+        public menu: Menu;
+        constructor(option: {
+            title: string;
+            tooltip: string;
+            icon: string;
+            alticon: string;
+            iconsAreTemplates: boolean;
+            menu: Menu;
+        });
+        remove(): void;
+        on(event: "click", listener: (...args: any[]) => void): this;
+    }
 }

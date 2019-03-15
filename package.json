@@ -2,7 +2,6 @@
   "name": "nwjs-types",
   "version": "0.0.3",
   "description": "Type defs for NW.js",
-  "main": "index.js",
   "types": "./nwjs.d.ts",
   "author": "envis10n <envis10n@protonmail.com>",
   "license": "MIT",

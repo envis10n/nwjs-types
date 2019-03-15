@@ -1,0 +1,13 @@
+{
+  "name": "nwjs-types",
+  "version": "0.0.1",
+  "description": "Type defs for NW.js",
+  "main": "index.js",
+  "types": "./nwjs.d.ts",
+  "author": "envis10n <envis10n@protonmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/envis10n/nwjs-types.git",
+  "dependencies": {
+    "@types/node": "^11.11.3"
+  }
+}

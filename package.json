@@ -1,5 +1,5 @@
 {
-  "name": "nwjs-types",
+  "name": "@types/nwjs",
   "version": "0.0.1",
   "description": "Type defs for NW.js",
   "main": "index.js",

@@ -186,7 +186,7 @@ declare namespace nw {
             [key: string]: Function;
         }
         constructor();
-        static get(window_object: any): Window;
+        static get(window_object?: any): Window;
         static open(url: string, options?: IWindowOptions, callback?: (win: Window) => void): Window;
         moveTo(x: number, y: number): this;
         moveBy(x: number, y: number): this;
@@ -298,3 +298,5 @@ declare namespace nw {
         on(event: "click", listener: (...args: any[]) => void): this;
     }
 }
+
+export default nw;

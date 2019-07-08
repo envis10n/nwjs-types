@@ -1,6 +1,6 @@
 {
   "name": "nwjs-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type defs for NW.js",
   "types": "./nwjs.d.ts",
   "author": "envis10n <envis10n@protonmail.com>",
